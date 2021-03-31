@@ -1,0 +1,45 @@
+{
+  "RDR React.FC": {
+    "prefix": "fc",
+    "body": [
+      "import React from 'react'",
+
+      "interface IProps {}",
+      "",
+      "const ${1:${TM_FILENAME_BASE}}: React.FC<IProps> = ({children}) => {",
+      "\treturn <div>{children}</div>",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Functional component, with TS interface"
+  },
+  "interface": {
+    "prefix": "rdri",
+    "body": ["export interface ${1:${TM_FILENAME_BASE}}", "{", "$0", "}"],
+    "description": "Creates a TS interface"
+  },
+  "store": {
+    "prefix": "store",
+    "body": [
+      "import {makeAutoObservable, runInAction} from 'mobx'",
+      "import {DoServiceCall} from '../../Helpers/ServiceHelpers'",
+      "import {myLog} from '../../Services/Client/LogService'",
+      "import i18n from '../../i18n'",
+      "",
+      "export default class Store {",
+
+      "constructor() { makeAutoObservable(this)}",
+      "",
+      "}",
+      "export const ${1:store} = new Store()"
+    ],
+    "description": "Creates a Mobx store"
+  },
+  "myFunction": {
+    "prefix": "myf",
+    "body": ["const ${1:myFunction} = ()=>{", "return ( <View></View>)", "}"],
+    "description": "create a render jsx function"
+  }
+}

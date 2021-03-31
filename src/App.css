@@ -1,0 +1,27 @@
+#root,
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.youtube {
+  width: 100%;
+  /* height: auto; */
+}
+
+.isLoading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
